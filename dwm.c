@@ -150,7 +150,7 @@ typedef struct {
 
 typedef struct Pertag Pertag;
 struct Monitor {
-	char ltsymbol[16];
+	char ltsymbol[16];  // 标签
 	float mfact;
 	int nmaster;
 	int num;
@@ -159,7 +159,7 @@ struct Monitor {
 	int mx, my, mw, mh;   /* screen size */
 	int wx, wy, ww, wh;   /* window area  */
 	unsigned int seltags;
-	unsigned int sellt;
+	unsigned int sellt;  // 布局
 	unsigned int tagset[2];
 	int showbar;
 	int topbar;
