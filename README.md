@@ -1,5 +1,7 @@
 # DWM YES
 
+yaocccc README
+
 dwm 是一个非常快速, 小巧并使用动态管理窗口的窗口管理器
 
 [展示视频: BV1Ef4y1Z7kA](https://www.bilibili.com/video/BV1Ef4y1Z7kA/)
@@ -67,6 +69,7 @@ tty中执行 `startx` 启动
 ### Nix Flake
 
 下面是在 nixos configuration 中使用它的示例
+
 ```nix
 {
   description = "My configuration";
@@ -110,11 +113,11 @@ tty中执行 `startx` 启动
   ^b#??????0x11^ => 0x11 后景色透明度
 
   本仓库维护了 statusbar脚本 入口为 ./statusbar/statusbar.sh
-  
+
   模块列表见 ./statusbar/packages
-  
+
   若需要使用 请逐个去查看 修改packages中的脚本文件
-  
+
   请在dwm启动时 调用 $DWM/statusbar/statusbar.sh cron
 
   注意 ~/.profile中需要有 该环境变量为强依赖关系
@@ -146,7 +149,7 @@ dwm启动时会去调用 $DWM/autostart.sh 脚本
 
 务必先修改config.h中启动终端的快捷键，本项目的config.h是我自用的配置 你需要手动修改
 
-例如 可以修改以下部分(如果你用的终端是st的话) 
+例如 可以修改以下部分(如果你用的终端是st的话)
 
 ```plaintext
     /* spawn + SHCMD 执行对应命令 */
@@ -168,9 +171,9 @@ yay -S wqy-microhei
 
 推荐以下按键配置
 
-关联链接  
-[极简终端: https://github.com/yaocccc/st](https://github.com/yaocccc/st)  
-[多tab管理: https://github.com/yaocccc/st](https://github.com/yaocccc/tabbed)  
+关联链接
+[极简终端: https://github.com/yaocccc/st](https://github.com/yaocccc/st)
+[多tab管理: https://github.com/yaocccc/st](https://github.com/yaocccc/tabbed)
 
 ```c
     { MODKEY,              XK_s,      togglescratch, SHCMD("tabbed -n scratchpad -c -r 2 st -w ''") },          /* super s          | 打开st scratchpad      */
@@ -186,28 +189,3 @@ yay -S wqy-microhei
 7. 自启动脚本没启动
 
 请检查DWM变量是否正确设置，如果实在不行了，可以直接强制改config.h 里的 autostartscript 和 statusbarscript 变量
-
-## 贡献者 THX 🌻
-
-- [yaocccc](https://github.com/yaocccc)
-  - [MASTER](#TOP)
-- [p3psi-boo](https://github.com/p3psi-boo)
-  - [PR#4 添加 Nix Flake 支持](https://github.com/yaocccc/dwm/pull/4)
-- [gxt-kt](https://github.com/gxt-kt)
-  - [PR#7 修复hide/show窗口栈索引带来的无法恢复窗口的bug](https://github.com/yaocccc/dwm/pull/7)
-  - [PR#19 二维选中、交换窗口](https://github.com/yaocccc/dwm/pull/19)
-- [Ruixi-rebirth](https://github.com/Ruixi-rebirth)
-  - [PR#12 优化flake](https://github.com/yaocccc/dwm/pull/12)
-  - [PR#16 优化flake](https://github.com/yaocccc/dwm/pull/16)
-- [Int-0X7FFFFFFF](https://github.com/Int-0X7FFFFFFF)
-  - [PR#20 修复了音量在中文环境下一直显示静音的错误](https://github.com/yaocccc/dwm/pull/20)
-- [zainmiku](https://github.com/zainmiku)
-  - [PR#25 音乐标题包含"'时的处理](https://github.com/yaocccc/dwm/pull/25) 
-
-## ENJOY IT 😃
-
-## Support: buy me a coffee
-
-<a href="https://www.buymeacoffee.com/yaocccc" target="_blank">
-  <img src="https://github.com/yaocccc/yaocccc/raw/master/qr.png">
-</a>
